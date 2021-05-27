@@ -1,0 +1,28 @@
+@use './mixins' as *;
+@use './variables' as *;
+
+.container {
+  padding: 0 1.1875rem;
+
+  @include breakpoint("l") {
+    padding: 0 5.0625rem;
+  }
+
+  &--pale {
+    @extend .container;
+    background-color: $Very-Pale-Cyan;
+  }
+}
+
+.heading {
+  color: $Very-Dark-Cyan;
+
+  &--align-right {
+    @extend .heading;
+    text-align: right;
+  }
+}
+
+.text {
+  color: $Grayish-Blue;
+}

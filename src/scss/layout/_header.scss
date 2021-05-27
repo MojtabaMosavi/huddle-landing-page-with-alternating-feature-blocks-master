@@ -1,0 +1,42 @@
+@use '../components/buttons';
+@use "../utilities/" as *;
+
+/* || Header */
+.header {
+  padding-top: 1.5rem;
+  padding-bottom: 5.785rem;
+  background: $Very-Pale-Cyan;
+
+  display: flex;
+  align-items: center;
+  &__logo {
+    margin-right: auto;
+    & > img {
+      max-width: 7.5rem;
+    }
+  }
+
+  &__btn {
+    font-size: 0.7rem;
+    padding: 0.5rem 1rem;
+  }
+
+  @include breakpoint("s") {
+    padding-top: 2.5rem;
+    padding-bottom: 3.59rem;
+    &__logo {
+      align-self: flex-end;
+      & > img {
+        max-width: 11.5rem;
+        margin-left: 0.48rem;
+        margin-top: -2rem;
+      }
+    }
+
+    &__btn {
+      padding: 0.8rem 3.5rem;
+      margin-right: 1.5rem;
+      font-size: 0.75rem;
+    }
+  }
+}

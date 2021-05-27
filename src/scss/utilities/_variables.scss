@@ -1,0 +1,20 @@
+/* ||  color */
+$Pink: hsl(322, 100%, 66%);
+$Very-Pale-Cyan: hsl(193, 100%, 96%);
+$Very-Dark-Cyan: hsl(192, 100%, 9%);
+$Grayish-Blue: hsl(208, 11%, 55%);
+
+/* ||  fonts  */
+
+/* headings  */
+$font-heading: "Poppins", sans-serif;
+/* Body and cta */
+$font-body: "Open Sans", sans-serif;
+
+/* || Media query breakpoints */
+$breakpoints: (
+  "xs": 500px,
+  "s": 600px,
+  "m": 800px,
+  "l": 1000px,
+);

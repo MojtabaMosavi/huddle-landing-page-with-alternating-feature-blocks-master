@@ -1,0 +1,193 @@
+@use '../utilities/' as *;
+@use '../components/feature' as *;
+
+.main {
+  .hero {
+    text-align: center;
+    padding-bottom: 2.1875rem;
+
+    &__content {
+      margin-bottom: 3.5rem;
+
+      @include breakpoint("l") {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-self: center;
+      }
+    }
+    &__heading {
+      font-size: 1.4rem;
+      margin-bottom: 2.3125rem;
+    }
+
+    &__text {
+      font-size: 0.93rem;
+      margin-bottom: 2.1875rem;
+    }
+
+    &__btn {
+      margin: 0 auto;
+      font-size: 0.7rem;
+      color: #fff;
+    }
+    @include breakpoint("m") {
+      &__content {
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      &__image {
+        width: 80%;
+        margin: 0 auto;
+      }
+    }
+
+    @include breakpoint("l") {
+      text-align: left;
+      display: flex;
+      align-items: center;
+
+      &__content {
+        flex: 1;
+        margin-left: 0.7rem;
+        margin-right: 2rem;
+      }
+
+      &__image {
+        flex: 1.25;
+        margin-right: 2rem;
+      }
+
+      &__heading {
+        margin-top: 5rem;
+        margin-bottom: 1.5rem;
+        font-size: 2.2rem;
+        max-width: 27.125rem;
+      }
+
+      &__text {
+        max-width: 30rem;
+        font-size: 1.03rem;
+      }
+
+      &__btn {
+        margin-left: 0;
+        font-size: 0.75rem;
+        padding: 0.9rem 4.1rem;
+      }
+
+      &__image {
+        margin-right: 0;
+      }
+    }
+  }
+}
+
+/* || Features */
+
+.features {
+  padding-top: 3.625rem;
+  padding-bottom: 14.25rem;
+
+  & > .feature {
+    margin-bottom: 2.5rem;
+  }
+
+  @include breakpoint("l") {
+    padding-top: 10rem;
+    padding-bottom: 21.25rem;
+  }
+}
+
+/* || Feature */
+
+.feature {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 1rem;
+  box-shadow: 0px 0px 12px -3px;
+  padding: 2.375rem 2rem;
+  text-align: center;
+  font-size: 0.7rem;
+  margin: 0 auto;
+
+  &__heading {
+    margin-bottom: 1.8125rem;
+  }
+
+  &__image {
+    max-width: 25.4375rem;
+    margin-top: 1.125rem;
+    margin-bottom: 3.875rem;
+    order: -1;
+  }
+
+  @include breakpoint("xs") {
+    &__text {
+      font-size: 0.9rem;
+    }
+
+    &__image {
+      max-width: 20rem;
+    }
+  }
+
+  @include breakpoint("m") {
+    max-width: 76.9375rem;
+    flex-direction: row;
+    text-align: left;
+
+    &__content {
+      flex: 2;
+    }
+
+    &__heading {
+      font-size: 1.5rem;
+      margin-bottom: 1.5rem;
+
+      &--right {
+        padding-left: 5.375rem;
+      }
+    }
+    &__text {
+      max-width: 25rem;
+      font-size: 0.9rem;
+      &--right {
+        padding-left: 5.375rem;
+      }
+
+      &--unset {
+        max-width: unset;
+      }
+    }
+
+    &__image {
+      flex: 1;
+      margin-bottom: 0;
+      order: 1;
+
+      &--reverse {
+        order: -1;
+      }
+    }
+  }
+
+  @include breakpoint("l") {
+    padding-left: 7.75rem;
+    max-width: unset;
+    &__heading {
+      &--right {
+        padding-left: 8.375rem;
+      }
+    }
+
+    &__text {
+      &--right {
+        padding-left: 8.375rem;
+      }
+    }
+  }
+}
